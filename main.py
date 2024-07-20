@@ -1,12 +1,8 @@
-from flask import Flask
-import os
-
-app = Flask(__name__)
+from blueprint import makeApp
 
 
-@app.route('/')
-def index():
-    return 'sudhanshu suar ke chodal'
+app = makeApp()
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=5000)
